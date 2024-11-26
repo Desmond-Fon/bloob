@@ -1,68 +1,72 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&family=Sigmar+One&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.hamburger-menu {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.line {
+  width: 20px;
+  height: 3px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger-menu.open .line:nth-child(1) {
+  transform: rotate(-45deg) translate(6px, 12px);
+}
+
+.hamburger-menu.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .line:nth-child(3) {
+  transform: rotate(45deg) translate(6px, -12px);
+}
+
+.slide {
+  background-image: url("./assets/slideBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20vh;
+}
+
+.sliding-text-box {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sliding-text {
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
   }
-  a:hover {
-    color: #747bff;
+  100% {
+    transform: translateX(-100%);
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.text-with-border {
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Adjust color and size as needed */
+}
+
+.text-with-border2 {
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black; /* Adjust color and size as needed */
 }
