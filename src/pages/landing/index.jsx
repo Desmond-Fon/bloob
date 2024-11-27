@@ -47,7 +47,7 @@ const Landing = () => {
                 <img src={token} className="w-full" alt="" />
             </div>
             <div className="w-full lg:w-[60%] relative">
-                <div className="absolute bottom-[15%] px-[5px] lg:px-[30px] flex justify-center items-center gap-1 lg:gap-2 py-2 border-[2px] border-black border-b-[5px] rounded-[8px] lg:text-[18px] lg:right-[20%] bg-white"><p>Ca : dgdhjksqajuw2839w8uygww</p> <img src={copy} alt=" className='cursor-pointer" onClick={() => {
+                <div className="absolute bottom-[15%] px-[5px] lg:px-[30px] flex justify-center items-center gap-1 lg:gap-2 py-2 border-[2px] border-black border-b-[5px] rounded-[8px] lg:text-[18px] lg:right-[20%] bg-white"><p>Ca : dgdhjksqajuw2839w8uygww</p> <img src={copy} alt="" className='cursor-pointer' onClick={() => {
                     navigator.clipboard.writeText(
                         "dgdhjksqajuw2839w8uygww"
                     );
