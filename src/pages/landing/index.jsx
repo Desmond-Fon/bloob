@@ -22,8 +22,8 @@ const Landing = () => {
         </div>
         <div className="flex justify-center relative items-center -mt-[100px] lg:-mt-[290px]">
             <img src={shadow} alt="" className='hidden lg:block lg:w-auto' />
-            <img src={hero} alt="" className='w-[100%] lg:hidde' />
-            <button className="border-[2px] bottom-[20px] absolute border-black rounded-[10px] translate transform origin-center rotate-[-7deg] py-[5px] lg:py-[20px] px-[20px] lg:px-[70px] font-sigmar text-with-border bg-primary">BUY BLOOB</button>
+            <img src={hero} alt="" className='w-[100%] lg:hidden' />
+            <button className="border-[2px] bottom-[20px] lg:bottom-auto absolute border-black rounded-[10px] translate transform origin-center rotate-[-7deg] py-[5px] lg:py-[20px] px-[20px] lg:px-[70px] font-sigmar text-with-border bg-primary">BUY BLOOB</button>
         </div>
         <div className="mt-[30px] lg:-mt-[280px]">
             <Slider />
