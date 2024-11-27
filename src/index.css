@@ -27,31 +27,25 @@
   transform: rotate(45deg) translate(6px, -12px);
 }
 
-.slide {
-  background-image: url("./assets/slideBg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 20vh;
-}
-
 .sliding-text-box {
   overflow: hidden;
   white-space: nowrap;
 }
 
 .sliding-text {
-  animation: slide 20s linear infinite;
+  display: flex;
+  animation: slide 2s linear infinite; /* Adjust timing for smoothness */
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0); /* Start from the initial position */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Slide halfway, covering the original set */
   }
 }
+
 
 .text-with-border {
   color: white;
