@@ -18,7 +18,7 @@ const Landing = () => {
             <Nav />
         </div>
         <div id='home' className="flex justify-center items-center lg:-mt-[60px]">
-            <img src={text} alt="" />
+            <img src={text} alt="" className='w-[90%] lg:w-auto' />
         </div>
         <div className="flex justify-center relative items-center -mt-[100px] lg:-mt-[290px]">
             <img src={shadow} alt="" className='hidden lg:block lg:w-auto' />
@@ -47,12 +47,15 @@ const Landing = () => {
                 <img src={token} className="w-full" alt="" />
             </div>
             <div className="w-full lg:w-[60%] relative">
-                <div className="absolute bottom-[15%] px-[5px] lg:px-[30px] flex justify-center items-center gap-1 lg:gap-2 py-2 border-[2px] border-black border-b-[5px] rounded-[8px] lg:text-[18px] lg:right-[20%] bg-white"><p>Ca : dgdhjksqajuw2839w8uygww</p> <img src={copy} alt="" className='cursor-pointer' onClick={() => {
-                    navigator.clipboard.writeText(
-                        "dgdhjksqajuw2839w8uygww"
-                    );
-                }} /></div>
-                <img src={section} alt="" className="w-full" /></div>
+                <div className="absolute w-full lg:w-auto bottom-[15%] left-1/2 transform -translate-x-1/2 px-[5px] lg:px-[30px] flex justify-center items-center gap-1 lg:gap-2 py-2 border-[2px] border-black border-b-[5px] rounded-[8px] text-[14px] lg:text-[18px] bg-white">
+                    <p className='whitespace-nowrap'>Ca : dgdhjksqajuw2839w8uygww</p> <img src={copy} alt="" className='cursor-pointer' onClick={() => {
+                        navigator.clipboard.writeText(
+                            "dgdhjksqajuw2839w8uygww"
+                        );
+                    }} />
+                </div>
+                <img src={section} alt="" className="w-full" />
+            </div>
         </div>
 
         <div className="flex justify-center items-center mt-[70px]">
@@ -61,9 +64,9 @@ const Landing = () => {
                     <h1 className='text-[40px] text-center lg:text-[68px] text-with-border2'>Join the community </h1>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-[20px] pb-[20px] lg:pb-0 lg:gap-[50px]">
                         <button className="border-[2px] border-black rounded-[8px] py-2 px-[50px] text-black bg-primary text-[24px] border-b-[5px]">Buy Now</button>
-                       <div className="flex justify-center items-center gap-3">
-                        <img src={dex} alt="" /><img src={xfoot} alt="" />
-                       </div>
+                        <div className="flex justify-center items-center gap-3">
+                            <img src={dex} alt="" /><img src={xfoot} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className="lg:w-[33%]"><img src={foot} className="w-full" alt="" /></div>
