@@ -50,8 +50,8 @@ const Nav = () => {
                 </div>
             </div>
 
-            <div className="lg:hidden flex justify-between items-center px-[5px] py-2 z-50 bg-overlay text-white venus pt-[12px] large:pt-[16px]">
-                <img src={logo} alt="logo" className="w-[70px] h-[70px]" />
+            <div className="lg:hidden w-[80%] bg-white flex justify-between items-center px-[20px] py-1 rounded-[10px] border-secondary border-b-[8px] border-[2px] z-50 bg-overlay text-white venus pt-[12px] large:pt-[16px]">
+                <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
 
                 <div></div>
                 <div
@@ -60,15 +60,15 @@ const Nav = () => {
                     onClick={toggleMenu}
                 >
                     <div
-                        className={`line ${!isOpen ? `bg-white mb-3` : `bg-white`}`}
+                        className={`line ${!isOpen ? `bg-black mb-3` : `bg-black`}`}
                     ></div>
-                    <div className={`line bg-white hidden`}></div>
-                    <div className={`line ${!isOpen ? `bg-white` : `bg-white`}`}></div>
+                    <div className={`line bg-black hidden`}></div>
+                    <div className={`line ${!isOpen ? `bg-black` : `bg-black`}`}></div>
                 </div>
             </div>
             <div
                 className={`${isOpen
-                        ? "fixed bg-black top-0 right-0 left-0 w-[100%] flex-col transition-all duration-300 ease-in-out px-[24px] flex justify-between gap-[25px] h-[50vh]  text-white lg:hidden z-[9999]"
+                        ? "fixed bg-secondary top-0 right-0 left-0 w-[100%] flex-col transition-all duration-300 ease-in-out px-[24px] flex justify-between gap-[25px] h-[50vh]  text-white lg:hidden z-[9999]"
                         : "fixed venus right-[-600%] transition-all duration-300 ease-in-out"
                     } `}
             >
@@ -86,37 +86,41 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center h-full">
-                    <div className="text-center flex flex-col justify-center items-center h-full gap-[0px] text-[40px] font-[600]">
+                    <div className="text-center flex flex-col justify-center items-center h-full gap-[10px] text-[40px] font-[600]">
                         <NavHashLink
                             smooth
                             onClick={toggleMenu}
-                            to="/#story"
-                            className="text-[20px] venus"
+                            to="/#home"
+                            className="text-[20px]"
                         >
-                            STORY
+                            Home
+                        </NavHashLink>{" "}
+                        <NavHashLink
+                            smooth
+                            onClick={toggleMenu}
+                            to="/#about"
+                            className="text-[20px]"
+                        >
+                            About
                         </NavHashLink>{" "}
                         <NavHashLink
                             smooth
                             onClick={toggleMenu}
                             to="/#howToBuy"
-                            className="text-[20px] venus"
+                            className="text-[20px]"
                         >
                             How to buy
                         </NavHashLink>{" "}
                         <NavHashLink
                             smooth
                             onClick={toggleMenu}
-                            to="/#community"
+                            to="/#tokenomics"
                             className="text-[20px] venus"
                         >
-                            COMMUNITY
+                            Tokenomics
                         </NavHashLink>{" "}
-                        <div className="group relative w-full flex mt-5 justify-center items-center">
-                            <button className="relative flex w-[70%] lg:w-full justify-center items-center transform transition-transform duration-300 ease-in-out scale-100 group-hover:scale-110">
-                                <p className="venus copy text-[24px] lg:text-[85px] tracking-[-0.7] lg:tracking-[-2.5px] absolute mt-2 lg:mt-5">
-                                    BUY GEKO
-                                </p>
-                            </button>
+                        <div className=" flex-col flex gap-4 justify-center items-center">
+                            <img src={x} alt="" className="w-[33px] h-[35px]" /><img src={tg} alt="" className="w-[33px] h-[35px]" />
                         </div>
                     </div>
                 </div>
