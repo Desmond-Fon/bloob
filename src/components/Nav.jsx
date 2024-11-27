@@ -119,7 +119,7 @@ const Nav = () => {
                         >
                             Tokenomics
                         </NavHashLink>{" "}
-                        <div className=" flex-col flex gap-4 justify-center items-center">
+                        <div className=" flex flex gap-4 justify-center items-center">
                             <img src={x} alt="" className="w-[33px] h-[35px]" /><img src={tg} alt="" className="w-[33px] h-[35px]" />
                         </div>
                     </div>
