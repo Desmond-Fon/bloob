@@ -3,6 +3,7 @@ import x from "../assets/x.png";
 import tg from "../assets/tg.png";
 import { NavHashLink } from "react-router-hash-link";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,8 @@ const Nav = () => {
                     </NavHashLink>{" "}
                 </div>
                 <div className="lg:flex gap-4 justify-center items-center hidden">
-                   <img src={x} alt="" className="w-[33px] h-[35px]" /><img src={tg} alt="" className="w-[33px] h-[35px]" />
+                    <Link to={'https://x.com/bloobonbase?s=21'}><img src={x} alt="" className="w-[33px] h-[35px]" /></Link>
+                    <Link to={'https://t.me/bloobonbase'}><img src={tg} alt="" className="w-[33px] h-[35px]" /></Link>
                 </div>
             </div>
 
@@ -68,8 +70,8 @@ const Nav = () => {
             </div>
             <div
                 className={`${isOpen
-                        ? "fixed bg-secondary top-0 right-0 left-0 w-[100%] flex-col transition-all duration-300 ease-in-out px-[24px] flex justify-between gap-[25px] h-[50vh]  text-white lg:hidden z-[9999]"
-                        : "fixed venus right-[-600%] transition-all duration-300 ease-in-out"
+                    ? "fixed bg-secondary top-0 right-0 left-0 w-[100%] flex-col transition-all duration-300 ease-in-out px-[24px] flex justify-between gap-[25px] h-[50vh]  text-white lg:hidden z-[9999]"
+                    : "fixed venus right-[-600%] transition-all duration-300 ease-in-out"
                     } `}
             >
                 <div className="absolute top-[30px] right-[22px]">
@@ -119,8 +121,9 @@ const Nav = () => {
                         >
                             Tokenomics
                         </NavHashLink>{" "}
-                        <div className=" flex flex gap-4 justify-center items-center">
-                            <img src={x} alt="" className="w-[33px] h-[35px]" /><img src={tg} alt="" className="w-[33px] h-[35px]" />
+                        <div className=" flex gap-4 justify-center items-center">
+                            <Link to={'https://x.com/bloobonbase?s=21'}><img src={x} alt="" className="w-[33px] h-[35px]" /></Link>
+                            <Link to={'https://t.me/bloobonbase'}><img src={tg} alt="" className="w-[33px] h-[35px]" /></Link>
                         </div>
                     </div>
                 </div>
